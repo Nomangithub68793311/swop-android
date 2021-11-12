@@ -26,11 +26,33 @@ import IconQR from 'react-native-vector-icons/Ionicons'
 import { flexDirection } from 'styled-system';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const viewWidth=windowWidth*.35;
+const viewWidth=windowWidth*.25;
 const imageWidth=viewWidth;
 const imageHeight=windowHeight*.1;
 const image2 =require('../images/background.png')
 
+const products=[
+    {src:require('../images/product/Swop/1.jpg'),name:'Black NFC Sticker',price:"$9.99",id:17},
+    {src:require('../images/product/Swop/2.jpg'),name:'Diamond NFC Sticker',price:"$9.99",id:1},
+    {src:require('../images/product/Swop/3.jpg'),name:'DogTag',price:"$9.99",id:2},
+    {src:require('../images/product/Swop/4.jpg'),name:'Flat Black NFC',price:"$9.99",id:3},
+    {src:require('../images/product/Swop/5.jpg'),name:'Galaxy NFC Sticker',price:"$9.99",id:4},
+    {src:require('../images/product/Swop/6.jpg'),name:'Gold Glitter NFC',price:"$9.99",id:5},
+    {src:require('../images/product/Swop/7.jpg'),name:'Gold NFC Sticker',price:"$14.99",id:6},
+    {src:require('../images/product/Swop/8.jpg'),name:'Midnight Retro NFC Sticker',price:"$9.99",id:7},
+    {src:require('../images/product/Swop/9.jpg'),name:'Pearl White Chip',price:"$9.99",id:8},
+    {src:require('../images/product/Swop/10.jpg'),name:'Prism NFC Keychain',price:"$9.99",id:9},
+    {src:require('../images/product/Swop/11.jpg'),name:'Prism NFC Sticker',price:"$14.99",id:10},
+    {src:require('../images/product/Swop/12.jpg'),name:'Prism NFC Sticker',price:"$9.99",id:11},
+    {src:require('../images/product/Swop/13.jpg'),name:'Prism Swop Keychain',price:"$9.99",id:12},
+    {src:require('../images/product/Swop/14.jpg'),name:'Purple NFC Popsocket',price:"$9.99",id:13},
+    {src:require('../images/product/Swop/15.jpg'),name:'Starry Midnight NFC sticker',price:"$9.99",id:14},
+    {src:require('../images/product/Swop/16.jpg'),name:'Swop Original NFC Card',price:"$9.99",id:15},
+    {src:require('../images/product/Swop/17.jpg'),name:'Turquoise NFC Sticker',price:"$9.99",id:16},
+    
+    
+    
+    ]
 function Buyswop() {
 
     const productPage=()=>{
@@ -43,56 +65,31 @@ function Buyswop() {
            All Digital Products
            </Text>
            
-           <View style={{flexDirection:'row',marginTop:5,flexWrap:'wrap',justifyContent:'space-between',marginHorizontal:25}}>
-               <TouchableOpacity onPress={productPage} style={{width:viewWidth, marginBottom:20}}>
-<Image source={require('../images/product/1.png')}style={{alignSelf:'center',borderRadius:16}}/>
-<Text style={{textAlign:'center'}}>Simple Black Chip
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
-<TouchableOpacity  onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/2.png')}style={{alignSelf:'center',borderRadius:16}} />
-<Text style={{textAlign:'center'}}>Pearl White Chip
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
-<TouchableOpacity  onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/3.png')} style={{alignSelf:'center',borderRadius:16}} />
-<Text style={{textAlign:'center'}}>Midnight Retro Chip
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
-<TouchableOpacity onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/4.png')}  style={{alignSelf:'center',borderRadius:16}}/>
-<Text style={{textAlign:'center'}}>Sepia Chip
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
-<TouchableOpacity  onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/5.png')}style={{alignSelf:'center',borderRadius:16}} />
-<Text style={{textAlign:'center'}}>Swop Pink
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
-<TouchableOpacity  onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/6.png')} style={{alignSelf:'center',borderRadius:16}} />
-<Text style={{textAlign:'center'}}>Key Ring
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
-<TouchableOpacity onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/7.jpeg')}  style={{alignSelf:'center',borderRadius:16}}/>
-<Text style={{textAlign:'center'}}>Swop White
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
+           <View style={{flexDirection:'row',marginTop:20,flexWrap:'wrap',justifyContent:'space-between',marginHorizontal:25}}>
+              
+              {products?products.map(item=>{
+      return(
 
-<TouchableOpacity onPress={productPage} style={{width:viewWidth,marginBottom:20}}>
-<Image source={require('../images/product/7.jpeg')}  style={{alignSelf:'center',borderRadius:16}}/>
-<Text style={{textAlign:'center'}}>Dog Tag
-{"\n"}$9.99{"\n"}
-</Text>
-</TouchableOpacity>
+        <TouchableOpacity Key={item.id} onPress={productPage} style={{width:viewWidth, marginBottom:10,marginHorizontal:10}}>
+        <Image source={item.src}style={{alignSelf:'center',borderRadius:16}}/>
+        <Text style={{textAlign:'center',marginTop:5,fontFamily:'Poppins-Light'}}>{item.name}
+        {"\n"}{item.price}{"\n"}
+        </Text>
+        </TouchableOpacity>
+
+
+
+      )
+
+
+
+              }
+              )              
+             
+
+:null
+}
+
 
 
        </View>
