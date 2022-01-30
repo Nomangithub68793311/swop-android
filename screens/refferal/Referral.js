@@ -70,61 +70,61 @@ function Referral({ navigation }) {
     //   ])
   }
   return (
-    <NativeBaseProvider>
-      <ImageBackground source={image2} resizeMode="cover" style={styles.image}>
-        <View style={{ alignContent: 'center', flex: 1, justifyContent: 'center' }}>
-          {/* <View>
+
+    <ImageBackground source={image2} resizeMode="cover" style={styles.image}>
+      <View style={{ alignContent: 'center', flex: 1, justifyContent: 'center', marginTop: -150 }}>
+        {/* <View>
                <Text style={{textAlign:'center'}}>Referral</Text>
            </View> */}
-          <View>
-            <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>Share your unique code to your friends &
-              {"\n"}   family to get reward &
-              {"\n"}the reward goes to both parties.
-            </Text>
-          </View>
-          <View style={{ marginTop: 5 }}>
-            <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>when they use your code to purchase a NFC chip from our e-shop
-              {"\n"}  they will get 1 free NFC Chip & you will get $10 for every verified purchase.
-              {"\n"} us through Venmo PayPal or
-              {"\n"}CashApp
-            </Text>
-          </View>
-          {/* <View style={{ marginTop: 5 }}>
+        <View>
+          <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>Share your unique code to your friends &
+            {"\n"}   family to get reward &
+            {"\n"}the reward goes to both parties.
+          </Text>
+        </View>
+        <View style={{ marginTop: 5 }}>
+          <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>when they use your code to purchase a NFC chip from our e-shop
+            {"\n"}  they will get 1 free NFC Chip & you will get $10 for every verified purchase.
+            {"\n"} us through Venmo PayPal or
+            {"\n"}CashApp
+          </Text>
+        </View>
+        {/* <View style={{ marginTop: 5 }}>
             <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>For every invite you will get $5 from
               {"\n"} us through Venmo PayPal or
               {"\n"}CashApp</Text>
           </View> */}
 
 
-          <View style={{ alignItems: 'center' }}>
+        <View style={{ alignItems: 'center' }}>
 
-            <TouchableOpacity onPress={() => {
-              copyToClipboard(copyText); alertinfo()
-            }
-            }
-              style={{
-                alignItems: 'center', marginBottom: 10,
-                justifyContent: 'center', borderRadius: 12, backgroundColor: 'white', marginVertical: 5, height: 56, width: 343
-              }}>
-              <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>{copyText}</Text>
-            </TouchableOpacity>
-            <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>Copy Referral code to Clipboard</Text>
-          </View>
-          <View style={{ alignItems: 'center' }}>
-            <TouchableOpacity onPress={savetocloud} style={{
+          <TouchableOpacity onPress={() => {
+            copyToClipboard(copyText); alertinfo()
+          }
+          }
+            style={{
               alignItems: 'center', marginBottom: 10,
-              justifyContent: 'center', borderRadius: 12, backgroundColor: '#536DEF', marginVertical: 16, height: 56, width: 343
+              justifyContent: 'center', borderRadius: 12, backgroundColor: 'white', marginVertical: 5, height: 56, width: 343
             }}>
-              <Text style={{ textAlign: 'center', fontSize: 16, color: '#FCFCFF', fontFamily: 'Poppins-Regular' }}>Payment Dashboard</Text>
-            </TouchableOpacity>
-          </View>
-
-
+            <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>{copyText}</Text>
+          </TouchableOpacity>
+          <Text style={{ textAlign: 'center', fontSize: 16, color: '#3C3B3B', fontFamily: 'Poppins-Regular' }}>Copy Referral code to Clipboard</Text>
+        </View>
+        <View style={{ alignItems: 'center' }}>
+          <TouchableOpacity onPress={savetocloud} style={{
+            alignItems: 'center', marginBottom: 10,
+            justifyContent: 'center', borderRadius: 12, backgroundColor: '#536DEF', marginVertical: 16, height: 56, width: 343
+          }}>
+            <Text style={{ textAlign: 'center', fontSize: 16, color: '#FCFCFF', fontFamily: 'Poppins-Regular' }}>Payment Dashboard</Text>
+          </TouchableOpacity>
         </View>
 
 
-      </ImageBackground>
-    </NativeBaseProvider>
+      </View>
+
+
+    </ImageBackground>
+
   )
 }
 const styles = StyleSheet.create({

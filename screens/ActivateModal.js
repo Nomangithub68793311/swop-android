@@ -92,6 +92,8 @@ function ActivateModal({ handlemodalActive, handleModelcut, username }) {
       await NfcManager.writeNdefMessage(bytes);
       Vibration.vibrate(DURATION)
       play()
+
+
       showSuccessBottomSheet()
 
       console.warn('successfully write ndef');
@@ -105,6 +107,7 @@ function ActivateModal({ handlemodalActive, handleModelcut, username }) {
   const showSuccessBottomSheet = () => {
     bottomSheetRef.current.snapTo(1)
     bottomSheetRefNew.current.snapTo(0)
+
   }
   const goToBack = () => {
     console.log('successfully write ndef');

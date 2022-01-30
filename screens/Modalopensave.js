@@ -105,6 +105,12 @@ function Modalopensave({ route, navigation }) {
         return 'https://';
       case 'Podcasts Link':
         return 'https://';
+      case 'Twitch Link':
+        return 'https://www.twitch.tv/';
+      case 'Medium Link':
+        return 'https://medium.com/';
+      case 'Calendly Link':
+        return 'https://calendly.com/';
       default:
         return '';
 
@@ -204,7 +210,7 @@ function Modalopensave({ route, navigation }) {
           <View style={{ justifyContent: 'center', alignItems: 'center', flex: 1 }}>
             <View style={{ width: viewWidth }}>
               <Image source={src}
-                style={{ height: imageHeight, width: imageWidth, borderRadius: 20 }} />
+                style={{ height: imageWidth, width: imageWidth, borderRadius: 20 }} />
             </View>
 
 

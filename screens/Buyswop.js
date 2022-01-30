@@ -24,7 +24,7 @@ import IconQR from 'react-native-vector-icons/Ionicons'
 import { flexDirection } from 'styled-system';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
-const viewWidth = windowWidth * .25;
+const viewWidth = windowWidth * .38;
 const imageWidth = viewWidth;
 const imageHeight = windowHeight * .1;
 const image2 = require('../images/background.png')
@@ -73,13 +73,13 @@ function Buyswop() {
 
   }, [])
   const productPage = (id) => {
-    Linking.openURL(`https://traviskaterherron.wixsite.com/my-site/${id}`)
+    Linking.openURL(`https://swopme.co/${id}`)
   }
   return (
     <ImageBackground source={image2} resizeMode="cover" style={styles.image}>
       <ScrollView keyboardShouldPersistTaps="handled" keyboardDismissMode="on-drag" style={{ width: "100%", height: "100%" }} contentContainerStyle={{ flexGrow: 1, justifyContent: 'center' }}>
 
-        <Text style={{ fontSize: 20, color: '#6C6C6C', fontFamily: 'Poppins-Regular', textAlign: 'center', marginTop: 50 }}>
+        <Text style={{ fontSize: 20, color: '#6C6C6C', fontFamily: 'Poppins-Regular', textAlign: 'center', marginTop: 35 }}>
           All Digital Products
         </Text>
 
@@ -88,9 +88,9 @@ function Buyswop() {
           {product ? product.map(item => {
             return (
 
-              <TouchableOpacity Key={item._id} onPress={() => productPage(item._id)} style={{ width: viewWidth, height: viewWidth, marginBottom: 10, marginHorizontal: 10 }}>
-                <Image source={{ uri: item.imageUrl[0] }} style={{ alignSelf: 'center', borderRadius: 16 }} />
-                <Text style={{ textAlign: 'center', marginTop: 5, fontFamily: 'Poppins-Light' }}>{item.name}
+              <TouchableOpacity Key={item._id} onPress={() => productPage(item._id)} style={{ width: viewWidth, height: viewWidth, marginVertical: 35, marginHorizontal: 10 }}>
+                <Image source={{ uri: item.imageUrl[0] }} style={{ alignSelf: 'center', borderRadius: 16, width: viewWidth - 15, height: viewWidth - 15 }} />
+                <Text style={{ fontSize: 15, textAlign: 'center', marginTop: 5, fontFamily: 'Poppins-Light' }}>{item.name}
                   {"\n"}${item.price}{"\n"}
                 </Text>
               </TouchableOpacity>

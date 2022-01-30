@@ -80,6 +80,10 @@ const more = [
   { src: require('../images/socialImages/more/Yelp.png'), group: 'more', picname: 'Yelp.png', placeholder: 'Yelp Link', id: 8, url: 'https://yelp.com/', name: 'Yelp' },
   { src: require('../images/socialImages/more/Podcasts.png'), group: 'more', picname: 'Podcasts.png', placeholder: 'Podcasts Link', id: 9, url: 'https://', name: 'Podcasts' },
 
+  { src: require('../images/socialImages/more/Twitch.png'), group: 'more', picname: 'Twitch.png', placeholder: 'Twitch Link', id: 10, url: 'https://www.twitch.tv/', name: 'Twitch' },
+  { src: require('../images/socialImages/more/Medium.png'), group: 'more', picname: 'Medium.png', placeholder: 'Medium Link', id: 11, url: 'https://medium.com/', name: 'Medium' },
+  { src: require('../images/socialImages/more/Calendly.png'), group: 'more', picname: 'Calendly.png', placeholder: 'Calendly Link', id: 12, url: 'https://calendly.com/', name: 'Calendly' },
+
 ]
 const numColumns = 3;
 const image2 = require('../images/background.png')

@@ -267,7 +267,7 @@ const Profile = ({ navigation, route }) => {
                   return (<View Key={uuid()} style={styles.items}  ><TouchableOpacity style={{ justifyContent: 'flex-start', flexDirection: 'row' }} onPress={() => { navigation.navigate('Account2', { list }) }}>
                     <Image style={{ height: 72, width: 72, borderRadius: 12 }} source={{ uri: list.pic }} />
                     <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-                      <Text style={{ color: '#3C3B3B', fontFamily: 'Poppins-Bold', textAlign: 'center', fontSize: 20, marginHorizontal: 10 }}>{list.accountuser}</Text>
+                      <Text style={{ color: '#3C3B3B', fontFamily: 'Poppins-Bold', textAlign: 'center', fontSize: 20, marginHorizontal: 30 }}>{list.accountuser}</Text>
                     </View>
                   </TouchableOpacity>
 
