@@ -136,7 +136,7 @@ android {
         applicationId "com.travisheron.swop"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
+        versionCode 5
         versionName "1.0.1"
         multiDexEnabled true
     }

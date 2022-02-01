@@ -20,8 +20,6 @@ import {
   StatusBar,
 } from 'react-native';
 
-import CameraRoll from "@react-native-community/cameraroll";
-import RNFS from "react-native-fs"
 import { Avatar, Title, Caption, Text, TouchableRipple } from 'react-native-paper'
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 import IconButton from 'react-native-vector-icons/Ionicons'
